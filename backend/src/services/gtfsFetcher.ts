@@ -1,4 +1,3 @@
-// backend/src/services/gtfsFetcher.ts
 import axios from "axios";
 import fs from "fs";
 import path from "path";

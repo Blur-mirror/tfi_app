@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const pgp = pgPromise(); // this creates a pg-promise instance
+const pgp = pgPromise(); 
 const db = pgp(process.env.DATABASE_URL!);
 
-export { db, pgp }; // export both
+export { db, pgp }; 

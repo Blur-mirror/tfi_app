@@ -1,7 +1,6 @@
-// backend/scripts/importStops.ts
 import fs from "fs";
 import csv from "csv-parser";
-import { db, pgp } from "../db"; // notice pgp imported too
+import { db, pgp } from "../db"; 
 
 (async () => {
   try {
@@ -15,7 +14,7 @@ import { db, pgp } from "../db"; // notice pgp imported too
     `);
 
     const results: any[] = [];
-    fs.createReadStream("data/stops.txt") // adjust path if needed
+    fs.createReadStream("data/stops.txt") 
       .pipe(csv())
       .on("data", (row) => {
         results.push({

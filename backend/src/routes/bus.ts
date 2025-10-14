@@ -1,4 +1,3 @@
-// backend/src/routes/bus.ts
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
@@ -23,7 +22,7 @@ router.get("/:stopId", async (req, res) => {
       headers: { "x-api-key": process.env.TFI_API_KEY },
     });
 
-    console.log("✅ Successfully fetched data, status:", response.status);
+    console.log("Yaaay finally! - Successfully fetched data, status:", response.status);
 
     // The API returns all vehicles — we'll just return it raw for now
     const data = response.data;
@@ -40,7 +39,7 @@ router.get("/:stopId", async (req, res) => {
     console.error("❌ Full error:", error);
     
     res.status(500).json({ 
-      error: "Failed to fetch bus data",
+      error: "RIP - Failed to fetch bus data",
       details: error.response?.data || error.message 
     });
   }
